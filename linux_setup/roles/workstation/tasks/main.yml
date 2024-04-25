@@ -1,4 +1,3 @@
 ---
-- name: Task is running from within the role
-  ansible.builtin.debug:
-    msg: "This is a task from my_role."
+- name: Include task list in play
+  ansible.builtin.include_tasks: ansible.yml

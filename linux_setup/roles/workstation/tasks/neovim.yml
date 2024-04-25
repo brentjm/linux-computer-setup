@@ -1,0 +1,6 @@
+---
+- name: Add Neovim ppa
+  ansible.builtin.apt_repository:
+    repo: deb https://ppa.launchpadcontent.net/neovim-ppa/stable/ubuntu
+    repo: deb http://archive.canonical.com/ubuntu hardy partner
+    state: present

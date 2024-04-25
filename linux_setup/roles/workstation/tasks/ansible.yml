@@ -1,0 +1,3 @@
+- name: Install ansible
+  community.general.pipx:
+    name: ansible
