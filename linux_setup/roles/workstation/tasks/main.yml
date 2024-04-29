@@ -1,3 +1,6 @@
 ---
-- name: Include task list in play
+- name: Include Ansible tasks
   ansible.builtin.include_tasks: ansible.yml
+
+- name: Include Neovim tasks
+  ansible.builtin.include_tasks: neovim.yml
