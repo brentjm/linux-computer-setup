@@ -1,0 +1,21 @@
+---
+- name: "Download NerdFont(s)"
+  ansible.builtin.get_url:
+    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip
+    dest: /home/{{ username }}/.local/share/fonts/Hack.zip
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: '0664'
+
+- name: Unzip NerdFont
+  ansible.builtin.unarchive:
+    src: "{{ item }}"
+    dest: "{{ font_dir }}/"
+    copy: no
+  with_fileglob:
+  - "{{ font_dir }}/*.zip"
+  vars:
+    font_dir: "/home/{{ username }}/.local/share/fonts"
+  
+- name: Update fonts
+  ansible.builtin.shell: fc-cache -f -v

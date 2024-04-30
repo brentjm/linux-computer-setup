@@ -1,0 +1,6 @@
+---
+- name: Download NodeJS #https://nodejs.org/en/download
+  ansible.builtin.get_url: 
+    url: '{{ nodejs_download_url }}'
+    dest: /home/{{ username }}/Downloads/nodejs.sh
+    checksum: ' {{ anaconda_download_checksum }}'

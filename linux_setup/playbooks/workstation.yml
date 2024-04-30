@@ -1,7 +1,7 @@
 ---
 - name: Setup workstation
   hosts: localhost
-  gather_facts: false
+  gather_facts: true
   become: true
   roles:
     - workstation

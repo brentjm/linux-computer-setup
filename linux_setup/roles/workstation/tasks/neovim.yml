@@ -5,6 +5,17 @@
 #    repo: deb http://archive.canonical.com/ubuntu hardy partner
 #    state: present
 #
+
+- name: Install Neovim basic utils
+  ansible.builtin.apt:
+    pkg:
+      - git
+      - build-essential
+      - make
+      - unzip
+      - ripgrep
+      - xclip
+    
 - name: Install libfuse2 for AppImages # https://github.com/AppImage/AppImageKit/wiki/FUSE
   ansible.builtin.apt:
     name: libfuse2
