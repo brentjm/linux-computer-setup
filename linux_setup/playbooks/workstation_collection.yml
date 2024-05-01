@@ -1,7 +1,7 @@
 ---
 - name: Test new role from within this playbook
   hosts: localhost
-  gather_facts: false
+  gather_facts: true
   tasks:
     - name: Testing role
       ansible.builtin.include_role:

@@ -1,3 +1,9 @@
-# Ansible Collection - brentjm.linux_setup
+# Linux setup Ansible collection
 
-Documentation for the collection.
+## Getting started
+
+to run locally:
+`ansible-playbook playbooks/workstation.yml`
+
+to run as installed collection
+`ansible-playbook playbooks/workstation_collection.yml`
