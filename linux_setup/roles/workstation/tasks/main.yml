@@ -17,8 +17,8 @@
 #- name: Install snaps
 #  ansible.builtin.include_tasks: snaps.yml
 #
-- name: Install Anaconda
-  ansible.builtin.include_tasks: anaconda.yml
-
+#- name: Install Anaconda
+#  ansible.builtin.include_tasks: anaconda.yml
+#
 - name: Install NodeJS
   ansible.builtin.include_tasks: nodejs.yml
