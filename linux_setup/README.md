@@ -7,3 +7,7 @@ to run locally:
 
 to run as installed collection
 `ansible-playbook playbooks/workstation_collection.yml`
+
+## TODO
+Automate gh cli installation
+Install Copilot for gh cli
