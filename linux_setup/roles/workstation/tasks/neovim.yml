@@ -15,6 +15,7 @@
       - unzip
       - ripgrep
       - xclip
+  become: true
     
 - name: Install libfuse2 for AppImages # https://github.com/AppImage/AppImageKit/wiki/FUSE
   ansible.builtin.apt:
