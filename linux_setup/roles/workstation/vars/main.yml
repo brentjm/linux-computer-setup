@@ -6,4 +6,4 @@ anaconda_download_url: https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Lin
 anaconda_download_checksum: sha256:c536ddb7b4ba738bddbd4e581b29308cb332fa12ae3fa2cd66814bd735dff231
 # https://github.com/nvm-sh/nvm
 nvm_download_url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh
-
+go_download_url: https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
