@@ -19,7 +19,7 @@
     
 - name: Install libfuse2 for AppImages # https://github.com/AppImage/AppImageKit/wiki/FUSE
   ansible.builtin.apt:
-    name: libfuse2
+    name: libfuse2t64
     state: present
 
 - name: Create AppImage directory
@@ -30,7 +30,7 @@
     group: "{{ username }}"
     mode: '0755'
 
-- name: 'Add {{ extra_path }} if PATH does not exist' #https://stackoverflow.com/questions/56560173/ansible-how-to-add-modify-path-variable-in-centos
+- name: 'Add PATH=$PATH if does not exist'
   lineinfile:
     path: /home/{{ username }}/.bashrc
     line: PATH="$PATH"
@@ -66,3 +66,8 @@
     owner: "{{ username }}"
     group: "{{ username }}"
     mode: '0755'
+
+- name: Clone Neovim configuration
+  ansible.builtin.git:
+    repo: git@github.com:brentjm/Neovim.git
+    dest: /home/{{ username }}/.config/nvim
